@@ -10,6 +10,6 @@ function PL=PL_logdist_or_norm(fc,d,d0,n,sigma)
 %       PL    : path loss[dB]
 lamda = 3e8/fc;
 PL = -20*log10(lamda/(4*pi*d0)) + 10*n*log10(d/d0);
-if nargin>4
-    PL = PL + sigma*randn(size(d));  
-end %如果输入参数大于4
+if nargin>4 %input var >4,sigma is the amplitude of normal distribution
+    PL = PL + sigma*randn(size(d));  %randn is normal distribute
+end %脠莽鹿没脢盲脠毛虏脦脢媒麓贸脫脷4
